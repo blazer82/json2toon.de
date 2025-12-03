@@ -1,0 +1,22 @@
+{
+  "title": "Token-Rechner",
+  "subtitle": "Schätzen Sie die Token-Auswirkung basierend auf Datengröße und Struktur. Vergleich mit minifiziertem JSON.",
+  "labels": {
+    "jsonSize": "Ungefähre JSON-Größe (Zeichen)",
+    "dataType": "Datenstruktur-Typ"
+  },
+  "options": {
+    "uniform": "Einheitliche Arrays (z.B. Benutzerlisten, Produktkataloge)",
+    "mixed": "Gemischte Struktur (z.B. API-Antworten, Konfigurationen)",
+    "nested": "Tief verschachtelt (z.B. rekursive Strukturen)"
+  },
+  "results": {
+    "jsonTokens": "JSON-Token (gesch.)",
+    "toonTokens": "TOON-Token (gesch.)",
+    "savings": "Ersparnis",
+    "increase": "Erhöhung",
+    "range": "Erwarteter Bereich: {{min}}% - {{max}}% Ersparnis",
+    "increaseRange": "Erwartete Erhöhung: {{min}}% - {{max}}%"
+  },
+  "note": "Schätzungen basieren auf minifiziertem JSON (ohne Leerzeichen). TOON spart Token bei einheitlichen Arrays, kann aber bei verschachtelten Strukturen mehr Token verbrauchen. Verwenden Sie den Konverter oben mit echten Daten für genaue Messungen."
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Wie TOON Token spart",
+  "intro": "TOON (Token-Oriented Object Notation) ist ein kompaktes Format, das speziell für LLM-Eingaben entwickelt wurde. Es reduziert den Token-Verbrauch durch:",
+  "features": [
+    {
+      "title": "Eliminierung redundanter Struktur",
+      "description": "Keine wiederholten Schlüssel, Klammern oder eckigen Klammern für einheitliche Arrays"
+    },
+    {
+      "title": "Tabellarische Kodierung",
+      "description": "Arrays von Objekten werden zu Kopfzeile + Zeilen (wie CSV)"
+    },
+    {
+      "title": "Minimale Quotierung",
+      "description": "Strings sind standardmäßig nicht quotiert, nur bei Bedarf quotiert"
+    }
+  ],
+  "warning": {
+    "title": "Wichtig: Formatiertes vs Minifiziertes JSON",
+    "text": "Einsparungen hängen von Ihrer JSON-Basis ab. Echte API-Aufrufe verwenden minifiziertes JSON (ohne Leerzeichen). Gegenüber minifiziertem JSON: Einheitliche Arrays sparen 20-35%, aber verschachtelte Objekte und Konfigurationen können den Token-Verbrauch um 15-20% ERHÖHEN. Nutzen Sie die Komprimieren-Schaltfläche oben für genaue Vergleiche."
+  },
+  "example": {
+    "label": "Beispiel: Array von Benutzern (vs formatiertes JSON)",
+    "jsonLabel": "Formatiertes JSON (~89 Token)",
+    "toonLabel": "TOON (~45 Token)",
+    "savings": "~50% vs formatiert, ~30% vs minifiziert"
+  }
+}

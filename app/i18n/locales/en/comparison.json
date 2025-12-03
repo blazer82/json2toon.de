@@ -1,0 +1,52 @@
+{
+  "title": "JSON vs TOON: When to Use Each",
+  "subtitle": "TOON saves tokens for uniform arrays but can increase tokens for nested structures. These estimates assume minified JSON (no whitespace).",
+  "headers": {
+    "dataType": "Data Type",
+    "example": "Example",
+    "savings": "vs Minified JSON",
+    "notes": "Notes"
+  },
+  "rows": [
+    {
+      "dataType": "Array of uniform objects",
+      "example": "User lists, product catalogs, log entries",
+      "savings": "20-35% savings",
+      "notes": "Best use case. TOON's tabular format shines here."
+    },
+    {
+      "dataType": "API responses with arrays",
+      "example": "Paginated lists, search results",
+      "savings": "0-15% savings",
+      "notes": "Savings mainly from array portion."
+    },
+    {
+      "dataType": "Mixed nested structures",
+      "example": "Complex API responses",
+      "savings": "-5% to +10%",
+      "notes": "Results vary. Test with your data."
+    },
+    {
+      "dataType": "Configuration objects",
+      "example": "App settings, feature flags",
+      "savings": "-10% to -20%",
+      "notes": "TOON increases tokens. Use JSON."
+    },
+    {
+      "dataType": "Deeply nested objects",
+      "example": "Recursive trees, org charts",
+      "savings": "-15% to -20%",
+      "notes": "TOON increases tokens. Use JSON."
+    },
+    {
+      "dataType": "Single flat objects",
+      "example": "Simple key-value pairs",
+      "savings": "-5% to +5%",
+      "notes": "Negligible difference either way."
+    }
+  ],
+  "recommendation": {
+    "title": "Recommendation",
+    "text": "Use TOON only for large arrays of uniform objects. For nested structures, configs, or mixed data, stick with minified JSON - it's often more token-efficient. Use the Minify button above to compare accurately."
+  }
+}

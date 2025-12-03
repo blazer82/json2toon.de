@@ -1,0 +1,26 @@
+{
+  "title": "When to Use TOON",
+  "subtitle": "TOON works best with uniform arrays. Click any example to try it - use Minify to see real-world savings.",
+  "samples": {
+    "users": {
+      "name": "User List",
+      "description": "Uniform array - saves 20-35% vs minified JSON"
+    },
+    "products": {
+      "name": "Product Catalog",
+      "description": "Uniform array - saves 20-35% vs minified JSON"
+    },
+    "api-response": {
+      "name": "API Response",
+      "description": "Mixed structure - minimal savings (~5%)"
+    },
+    "config": {
+      "name": "Config Object",
+      "description": "Nested config - may increase tokens"
+    },
+    "nested": {
+      "name": "Deeply Nested",
+      "description": "Deep nesting - may increase tokens"
+    }
+  }
+}

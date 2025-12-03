@@ -1,0 +1,41 @@
+{
+  "title": "Häufig gestellte Fragen",
+  "items": [
+    {
+      "question": "Was ist das TOON-Format?",
+      "answer": "TOON (Token-Oriented Object Notation) ist ein kompaktes, menschenlesbares Datenformat, das speziell für LLM-Eingaben entwickelt wurde. Es kodiert dieselben Daten wie JSON, aber mit deutlich weniger Token durch tabellarische Kodierung für Arrays und minimalen Syntax-Overhead. Es bietet verlustfreie, deterministische Hin- und Rückkonvertierung mit JSON."
+    },
+    {
+      "question": "Welche LLMs unterstützen TOON?",
+      "answer": "TOON funktioniert mit jedem LLM, das Texteingaben akzeptiert, einschließlich Claude, GPT-4, GPT-3.5, Llama, Mistral und anderen. Da LLMs Text-Token verarbeiten, führt die reduzierte Token-Anzahl direkt zu Kosteneinsparungen und mehr Spielraum innerhalb der Kontextfenster. Beachten Sie jedoch, dass die meisten LLMs hauptsächlich auf JSON trainiert wurden, sodass Sie möglicherweise eine kurze Formaterklärung in Ihre Prompts aufnehmen müssen."
+    },
+    {
+      "question": "Werden meine Daten an einen Server gesendet?",
+      "answer": "Nein. Alle Konvertierungen erfolgen vollständig in Ihrem Browser mit JavaScript. Ihre Daten verlassen niemals Ihr Gerät. Wir speichern, protokollieren oder übertragen keine der JSON- oder TOON-Inhalte, die Sie eingeben. Sie können dies überprüfen, indem Sie den Netzwerk-Tab in den Entwicklertools Ihres Browsers prüfen."
+    },
+    {
+      "question": "Wie genau ist die Token-Zählung?",
+      "answer": "Wir verwenden den Tokenisierungs-Algorithmus von GPT-4 (über gpt-tokenizer) für die Zählung. Dies liefert genaue Werte für OpenAI-Modelle. Andere LLMs (Claude, Llama usw.) verwenden andere Tokenizer, sodass die tatsächlichen Werte leicht abweichen können (typischerweise 5-10%). Der relative Einsparungsprozentsatz ist in der Regel über alle Modelle hinweg konsistent."
+    },
+    {
+      "question": "Wann sollte ich TOON NICHT verwenden?",
+      "answer": "TOON kann den Token-Verbrauch tatsächlich ERHÖHEN bei: (1) Tief verschachtelten Strukturen (15-20% mehr Token als minifiziertes JSON), (2) Konfigurationsobjekten ohne Arrays (10-20% mehr Token), (3) Sehr unregelmäßigen Daten, bei denen jedes Objekt unterschiedliche Felder hat. TOON spart nur Token bei einheitlichen Arrays von Objekten mit konsistenten Feldern. Nutzen Sie immer die Komprimieren-Schaltfläche, um gegen echtes minifiziertes JSON zu vergleichen - die Einsparungen sind viel geringer als beim Vergleich mit formatiertem JSON."
+    },
+    {
+      "question": "Kann ich TOON in Produktionsanwendungen verwenden?",
+      "answer": "Ja. Die @toon-format/toon-Bibliothek ist auf npm verfügbar und bietet encode/decode-Funktionen für JavaScript/TypeScript. Es gibt auch Implementierungen für Python, PHP, Go, Rust und .NET. TOON ist für verlustfreie Hin- und Rückkonvertierung konzipiert, sodass Sie für LLM-Aufrufe zu TOON konvertieren und für Ihre Anwendungslogik zurück zu JSON."
+    },
+    {
+      "question": "Ist TOON ein Ersatz für JSON?",
+      "answer": "Nein. TOON ist speziell für LLM-Token-Effizienz optimiert, nicht als allgemeines Datenaustauschformat. Wir empfehlen, JSON für APIs, Speicherung und Anwendungsdaten zu behalten und nur beim Senden von Daten an LLMs zu TOON zu konvertieren. So erhalten Sie das Beste aus beiden Welten: JSONs Allgegenwärtigkeit und Tooling plus TOONs Token-Effizienz, wo es darauf ankommt."
+    },
+    {
+      "question": "Was ist die TOON-Spezifikation?",
+      "answer": "TOON hat eine offene Spezifikation, die unter github.com/toon-format/spec verfügbar ist. Das Format verwendet einrückungsbasierte Verschachtelung, tabellarische Kodierung für einheitliche Arrays (einmalige Felddeklaration, dann Streaming von Zeilen), minimale Quotierung und explizite Array-Längendeklarationen. Die offizielle TypeScript-Implementierung ist unter github.com/toon-format/toon."
+    },
+    {
+      "question": "Warum nicht einfach YAML verwenden?",
+      "answer": "YAML wird oft als token-effiziente Alternative zu JSON vorgeschlagen, aber das ist irreführend. Benchmarks zeigen, dass YAML ~21% MEHR Token verbraucht als minifiziertes JSON, weil: (1) YAML nicht minifiziert werden kann - Leerzeichen tragen Bedeutung, (2) YAML immer noch Schlüssel für jedes Array-Element wiederholt, genau wie JSON. TOON löst beide Probleme: Es verwendet tabellarische Kodierung für Arrays (Schlüssel einmal deklariert, dann Zeilen wie CSV), was zu ~26% weniger Token als YAML in Benchmarks führt. Für einheitliche Arrays schlägt TOON sowohl YAML als auch minifiziertes JSON."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "JSON vs TOON: Wann welches Format verwenden",
+  "subtitle": "TOON spart Token bei einheitlichen Arrays, kann aber bei verschachtelten Strukturen mehr Token verbrauchen. Diese Schätzungen basieren auf minifiziertem JSON (ohne Leerzeichen).",
+  "headers": {
+    "dataType": "Datentyp",
+    "example": "Beispiel",
+    "savings": "vs Minifiziertes JSON",
+    "notes": "Hinweise"
+  },
+  "rows": [
+    {
+      "dataType": "Array einheitlicher Objekte",
+      "example": "Benutzerlisten, Produktkataloge, Log-Einträge",
+      "savings": "20-35% Ersparnis",
+      "notes": "Bester Anwendungsfall. TOONs tabellarisches Format glänzt hier."
+    },
+    {
+      "dataType": "API-Antworten mit Arrays",
+      "example": "Paginierte Listen, Suchergebnisse",
+      "savings": "0-15% Ersparnis",
+      "notes": "Einsparungen hauptsächlich vom Array-Teil."
+    },
+    {
+      "dataType": "Gemischte verschachtelte Strukturen",
+      "example": "Komplexe API-Antworten",
+      "savings": "-5% bis +10%",
+      "notes": "Ergebnisse variieren. Mit Ihren Daten testen."
+    },
+    {
+      "dataType": "Konfigurationsobjekte",
+      "example": "App-Einstellungen, Feature-Flags",
+      "savings": "-10% bis -20%",
+      "notes": "TOON erhöht Token-Verbrauch. JSON verwenden."
+    },
+    {
+      "dataType": "Tief verschachtelte Objekte",
+      "example": "Rekursive Bäume, Organigramme",
+      "savings": "-15% bis -20%",
+      "notes": "TOON erhöht Token-Verbrauch. JSON verwenden."
+    },
+    {
+      "dataType": "Einzelne flache Objekte",
+      "example": "Einfache Schlüssel-Wert-Paare",
+      "savings": "-5% bis +5%",
+      "notes": "Vernachlässigbarer Unterschied."
+    }
+  ],
+  "recommendation": {
+    "title": "Empfehlung",
+    "text": "Verwenden Sie TOON nur für große Arrays einheitlicher Objekte. Für verschachtelte Strukturen, Konfigurationen oder gemischte Daten bleiben Sie bei minifiziertem JSON - es ist oft token-effizienter. Nutzen Sie die Komprimieren-Schaltfläche oben für genaue Vergleiche."
+  }
+}

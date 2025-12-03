@@ -1,0 +1,26 @@
+{
+  "title": "Wann TOON verwenden",
+  "subtitle": "TOON funktioniert am besten mit einheitlichen Arrays. Klicken Sie auf ein Beispiel - nutzen Sie Komprimieren für realistische Einsparungen.",
+  "samples": {
+    "users": {
+      "name": "Benutzerliste",
+      "description": "Einheitliches Array - spart 20-35% vs minifiziertes JSON"
+    },
+    "products": {
+      "name": "Produktkatalog",
+      "description": "Einheitliches Array - spart 20-35% vs minifiziertes JSON"
+    },
+    "api-response": {
+      "name": "API-Antwort",
+      "description": "Gemischte Struktur - minimale Ersparnis (~5%)"
+    },
+    "config": {
+      "name": "Konfigurationsobjekt",
+      "description": "Verschachtelte Konfiguration - kann Token erhöhen"
+    },
+    "nested": {
+      "name": "Tief verschachtelt",
+      "description": "Tiefe Verschachtelung - kann Token erhöhen"
+    }
+  }
+}

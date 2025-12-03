@@ -1,0 +1,22 @@
+{
+  "title": "Token Savings Calculator",
+  "subtitle": "Estimate token impact based on data size and structure. Compared to minified JSON.",
+  "labels": {
+    "jsonSize": "Approximate JSON size (characters)",
+    "dataType": "Data structure type"
+  },
+  "options": {
+    "uniform": "Uniform arrays (e.g., user lists, product catalogs)",
+    "mixed": "Mixed structure (e.g., API responses, configs)",
+    "nested": "Deeply nested (e.g., recursive structures)"
+  },
+  "results": {
+    "jsonTokens": "JSON tokens (est.)",
+    "toonTokens": "TOON tokens (est.)",
+    "savings": "savings",
+    "increase": "increase",
+    "range": "Expected range: {{min}}% - {{max}}% savings",
+    "increaseRange": "Expected increase: {{min}}% - {{max}}%"
+  },
+  "note": "Estimates assume minified JSON baseline (no whitespace). TOON saves tokens for uniform arrays but can increase token usage for nested structures. Use the converter above with real data for accurate measurements."
+}

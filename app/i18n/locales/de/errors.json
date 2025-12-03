@@ -1,0 +1,8 @@
+{
+  "boundary": {
+    "oops": "Hoppla!",
+    "unexpected": "Ein unerwarteter Fehler ist aufgetreten.",
+    "notFound": "404",
+    "pageNotFound": "Die angeforderte Seite konnte nicht gefunden werden."
+  }
+}

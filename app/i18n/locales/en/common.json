@@ -1,0 +1,26 @@
+{
+  "buttons": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "paste": "Paste",
+    "clear": "Clear",
+    "samples": "Samples",
+    "tryIt": "Try it",
+    "minify": "Minify",
+    "format": "Format",
+    "moreActions": "More actions"
+  },
+  "labels": {
+    "characters": "{{count, number}} characters",
+    "tokens": "{{count, number}} tokens"
+  },
+  "modes": {
+    "jsonToToon": "JSON \u2192 TOON",
+    "toonToJson": "TOON \u2192 JSON"
+  },
+  "savings": {
+    "high": "Good savings (20-35%)",
+    "medium": "Variable (0-15%)",
+    "low": "May increase tokens"
+  }
+}

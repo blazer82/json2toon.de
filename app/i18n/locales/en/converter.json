@@ -1,0 +1,21 @@
+{
+  "labels": {
+    "jsonInput": "JSON Input",
+    "toonInput": "TOON Input",
+    "jsonOutput": "JSON Output",
+    "toonOutput": "TOON Output",
+    "jsonTokens": "JSON tokens",
+    "toonTokens": "TOON tokens"
+  },
+  "placeholders": {
+    "jsonInput": "Paste your JSON here...\n\n{\n  \"example\": \"data\"\n}",
+    "toonInput": "Paste your TOON here...",
+    "output": "Output will appear here..."
+  },
+  "stats": {
+    "saved": "saved",
+    "increase": "increase",
+    "savings": "savings",
+    "warning": "TOON increases tokens for this structure. Use minified JSON instead."
+  }
+}

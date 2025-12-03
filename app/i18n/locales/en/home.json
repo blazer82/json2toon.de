@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "JSON to TOON Converter - Optimize LLM Token Usage | json2toon.de",
+    "description": "Free online JSON to TOON converter. Optimize LLM token usage with Token-Oriented Object Notation. Best for uniform arrays - saves 20-35% vs minified JSON. Works with Claude, GPT-4, and all major AI models. Client-side only.",
+    "keywords": "json to toon converter, toon to json, reduce llm token usage, optimize json for claude, optimize json for gpt, toon format tutorial, token oriented object notation, llm api costs, ai token optimization",
+    "ogTitle": "JSON to TOON Converter - Optimize Tokens for LLM Calls",
+    "ogDescription": "Convert JSON to TOON format instantly. Optimize array data for token efficiency with Claude, GPT-4, and other LLMs.",
+    "twitterDescription": "Optimize LLM token usage for array data with free online converter"
+  },
+  "header": {
+    "subtitle": "Optimize LLM token usage with TOON format"
+  },
+  "footer": {
+    "privacy": "All conversions happen client-side. Your data never leaves your browser.",
+    "toonSpec": "TOON Spec",
+    "github": "GitHub"
+  }
+}
